@@ -30,18 +30,22 @@ _b3:
 	str w2, [x1, #4]
 
 	ldr w2, [x0, #8]
+	add w2, w2, #100
 	str w2, [x1, #8]
 
-	ldr w2, [x1, #12]
+	ldr w2, [x0, #12]
 	str w2, [x1, #12]
 	
-	ldr w2, [x1, #16]
+	ldr w2, [x0, #16]
 	str w2, [x1, #16]
 	
-	ldr w2, [x1, #20]
+	ldr w2, [x0, #20]
 	str w2, [x1, #20]
 _b4:
-
+	ldr x0, =coyote
+	ldr w2, [x0,#8]
+	add w2, w2, #100
+	str w2, [x0,#8]
 alldone:
 	mov x0, 0
 	ret
